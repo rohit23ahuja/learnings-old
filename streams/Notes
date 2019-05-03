@@ -1,0 +1,16 @@
+Streams is a sequence of elements generating from source supporting parallel and sequential aggregate operations.
+Source refers to - arrays, list, set. But not map.
+Order of data in stream is same as the source.
+Do not store data. 
+Is a single use sequence of data.
+IllegalStateException if we try reuse Stream. 
+Get closed after use
+Map Api does not have stream method
+Intermediate stream operations are generally lazy in nature. ex - filter, map
+Terminal operations return result and consume the stream.
+Intermediate operations is executed only when terminal operation is called on it. terminal operations cannot be chained. 
+all intermediate operations return stream.
+sourceDataStructure.stream().allMatch,count,distinct,map,filter,foreach(INTERMEDIATE OPRATIONS).get,OrElse,filter,map,ifPresent,OfNullable(TERMINAL OPERATIONS)
+http://java.boot.by/ocpjp8-upgrade-guide/ch03s02.html 
+https://stackify.com/streams-guide-java-8/
+https://blog.jooq.org/2015/12/08/3-reasons-why-you-shouldnt-replace-your-for-loops-by-stream-foreach/
