@@ -1,4 +1,4 @@
-Streams is a sequence of elements generating from source supporting parallel and sequential aggregate operations.
+<b>Streams</b> is a sequence of elements generating from source supporting parallel and sequential aggregate operations.
 Source refers to - arrays, list, set. But not map.
 Order of data in stream is same as the source.
 Do not store data. 
