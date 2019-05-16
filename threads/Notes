@@ -1,0 +1,13 @@
+* A thread is an individual process that has its own call stack.
+* There is always one thread per call stack or one call stack per thread or each thread has its own call stack.
+* Main thread can exit before child thread. Main thread is a non daemon thread.
+* When JVM starts --> a thread then calls the Main method of a specific class.
+* JVM continues to execute threads until System.exit or All non-daemon threads have exited.
+* Application servers have self managed thread pool.
+* Thread Local is like thread scope. Global and local specific to thread.
+* Using thread local, if a thread calls methods from several classes then all the methods can access thread local set by other methods.
+* Callable and Runnable are both interfaces for tasks that are to executed by multiple threads.
+* Runnable can be executed by both thread or ExecutorService. Callable only by ExecutorService.
+* Runnable does not return value.
+* Callable does return value in form of future and can throw a checked exception. 
+ 
