@@ -24,7 +24,7 @@ public class ProducerConsumer {
 					}
 				}
 				buffer[count++] = 1;
-				lock.notifyAll();
+				lock.notify();
 			}
 		}
 	}
@@ -32,7 +32,7 @@ public class ProducerConsumer {
 	static class Consumer {
 		public void consume() {
 			synchronized (lock) {
-				while (isEmpty(buffer)) {
+				if (isEmpty(buffer)) {
 					try {
 						lock.wait(1000);
 					} catch (InterruptedException e) {
@@ -40,7 +40,7 @@ public class ProducerConsumer {
 					}
 				}
 				buffer[--count] = 0;
-				lock.notifyAll();
+				lock.notify();
 			}
 
 		}
@@ -51,7 +51,7 @@ public class ProducerConsumer {
 		count = 0;
 		Producer p = new Producer();
 		Runnable r1 = () -> {
-			for (int i = 0; i < 50; i++) {
+			for (int i = 0; i < 10; i++) {
 				p.produce();
 			}
 			System.out.println("Done producing");
@@ -59,7 +59,7 @@ public class ProducerConsumer {
 
 		Consumer c = new Consumer();
 		Runnable r2 = () -> {
-			for (int i = 0; i < 52; i++) {
+			for (int i = 0; i < 10; i++) {
 				c.consume();
 			}
 			System.out.println("Done consuming");
