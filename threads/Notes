@@ -10,4 +10,4 @@
 * Runnable can be executed by both thread or ExecutorService. Callable only by ExecutorService.
 * Runnable does not return value.
 * Callable does return value in form of future and can throw a checked exception. 
- 
+* wait() should be called in synchronized context only. wait and notify relate to communication between threads. 
