@@ -10,4 +10,7 @@
 * Runnable can be executed by both thread or ExecutorService. Callable only by ExecutorService.
 * Runnable does not return value.
 * Callable does return value in form of future and can throw a checked exception. 
-* wait() should be called in synchronized context only. wait and notify relate to communication between threads. 
+* every object in java can act as a monitor that has an lock, a entry queue and waiting queue. synchronized method of an object can only be executed by a thread, if it has lock for that object. if a thread invokes a synchronized method and another thread owns the lock, then this thread goes into blocked state and put in the entry queue.
+* wait(), notify() and notifyAll() should be called in synchronized context only otherwise illegalmonitor exception is thrown. wait and notify relate to communication between threads. 
+* wait method is part of object class. when a thread calls the wait method it releases the lock it is holding and is moved to the waiting queue of this lock. the reason to call wait is that a thread wants to sit idle until a particular state is achieved.
+* the reason to call notify is that thread wants to notify other threads that particular state has been achieved. this state is a communication channel between threads. if these methods are not called in synchronized context, they will not be communicate the state to other threads.
