@@ -1,5 +1,5 @@
 * ConcurrentHashMap to be used in cases where frequent reads and less writes and need thread safety.
-* CHM has a data structure segments. Each bucket is controlled by one segment. Number of segments is concurrency level.
+* CHM has a data structure segments. Each node is controlled by one segment. Number of segments is concurrency level.
 * Segments gets locked when inserting or updating data. segments act like locks.
 * If write is on different segment it can happen concurrently. 
 * Reads are lock free, it may or may not return the latest value.
