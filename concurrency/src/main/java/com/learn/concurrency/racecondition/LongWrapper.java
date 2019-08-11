@@ -7,9 +7,12 @@ public class LongWrapper {
 	public LongWrapper(long v) {
 		l = v;
 	}
-
+	
+	// synchronized read is needed to get the last written in the incrment synchronized block
 	public long getValue() {
-		return l;
+		synchronized(key){
+			return l;	
+		}
 	}
 
 	public void incrementValue() {
