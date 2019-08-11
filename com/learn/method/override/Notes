@@ -1,0 +1,13 @@
+Overriding is a feature in java that allows a subclass or child class to provide a specific implementation
+ of a method that is already present in one of its parent or super classes.
+overriding is run time polymorphism, overloading is compile time.
+overriding conditions - 
+	should have same name
+	same number and data type of parameters
+	same return type or sub class of return type
+	access modifier should be same or can allow more than that of parent
+	cannot make a static method as instance method or instance method as static in sub class
+	if super class method does not throw checked exception, sub class overridden method can only throw unchecked exception
+	if super class method does throw checked exception, sub class overridden method can throw no exception, same exception or sub class of exception thrown from parent.  
+violating overriding rules generate compile time error
+final methods cannot be overridden 

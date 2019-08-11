@@ -1,0 +1,34 @@
+Hash map used to store data in key value pair. It is an array of buckets. A bucket is a linked list of Node data structure that stores key, value and pointer to next.
+Hash map is an implementation of map interface. Node class is implementation of Entry interface.
+Hash map can contain null key and null value. Null key is stored index 0.
+
+Operations available - get, put, remove, clear.
+Best and average case performance for search, insert and remove is O(1) and worst case is O(n) in case linked list and worst case is O(logn) in self balancing binary search tree.
+Put Operation 
+	1. Initial hash value is calculated using hashCode of key
+	2. hash() method of HashMap class is used to calculate the final hash value. This ultimately gives the index of bucket where item needs to be inserted.
+	3. If bucket empty then item is inserted. If not empty, the equals method is used. If equals evaluates to true the value is replaced and the previous value is returned. Else item is added to end of linked list and null is returned from put.
+Get Operation
+	1. Hashcode of key is calculated.
+	2. bucket/array index is calculated in hash method.
+	3. once bucket is known, key are compared using equals.
+
+Bucket can be either a Linked list or Tree Node (self balancing binary tree). Max buckets can be equal to the size of hashmap.
+Hash Collision - Since two unequal objects can have same hashcode, there hashcodes would point to same bucket even though the keys are unequal. Collisions are handled by using linked list pre java 8 and using tree map since java 8. Hash collision might also occur due to small size of underlying array.
+
+Performance of hashmap is governed by load factor and initial capacity. the underlying array is doubled when the number of entries exceeds the product load factor and capacity.
+Load factor determines when to increase capacity of hashmap. Hashmap increases capacity by 2 to the power. default - 2 to power 4.
+
+Rehashing - process occurs when the size of hash map is increased. Hash of every key is calculated again with increased capacity as parameter. 
+This gives the new bucket location for each item and ultimately even distribution.
+Rehashing result in reversal of linked list items because after calculating hash the items are added to the head of linked list to avoid tail traversal.
+
+During Rehashing Hashmap might result in infinite loop, If two threads try to do the rehashing process at the same time.
+As the linked list is reversed, it might result in a cycle in linked list.
+
+If we use a mutable object as a key in hash map, the hashcode value will be different if we update the key object and the contract will be broken.
+
+Pending learning - why hashmap size is 16 by default.
+https://mincong-h.github.io/2018/04/08/learning-hashmap/
+https://dzone.com/articles/hashmap-internal
+https://jrebel.com/wp-content/uploads/2016/04/Java-Collections-cheat-sheet.png   		 

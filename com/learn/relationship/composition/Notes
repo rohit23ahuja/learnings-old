@@ -1,0 +1,5 @@
+Association - relationship where each object has its own life cycle. Teacher Student example. A teacher can have multiple students and student can have multiple teachers. Both can create and delete independently, no ownership.
+Aggregation - There is ownership and a child can have a owner. Department and teacher example. "has-a" relationship
+Composition - strong aggregation and strong ownership. Child cannot exist without parent. house and rooms example. rooms cannot exist without house.
+is-a relation is inheritance
+has-a relation is aggregation or composition. 

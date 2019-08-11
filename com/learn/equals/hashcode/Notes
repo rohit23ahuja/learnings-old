@@ -1,0 +1,5 @@
+Objects that are equal as per equals must have same hash code.
+Unequal objects can have same or different hash codes. However same hash codes for unequal objects effects performance in hash based collections.
+Hashcode is an unique integer representation of an object.
+Default implementation return an integer value by converting internal address of the object.
+For equals method use getClass check. as instanceof check returns true for subtype as well.
