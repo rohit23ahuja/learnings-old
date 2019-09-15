@@ -25,7 +25,7 @@ public class CallableFutureExample {
 			//blocking operation main thread will wait t
 			try {
 				Integer result = future.get();
-				System.out.println("Result of future #"+i+" = "+result);
+				System.out.println("Result of future is #"+i+" = "+result);
 			} catch (InterruptedException | ExecutionException e) {
 				e.printStackTrace();
 			}
