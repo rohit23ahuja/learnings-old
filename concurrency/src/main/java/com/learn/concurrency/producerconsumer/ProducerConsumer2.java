@@ -1,4 +1,4 @@
-package learn.threads.producerconsumer;
+package com.learn.concurrency.producerconsumer;
 
 public class ProducerConsumer2 {
 	private static int[] buffer;

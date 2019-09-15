@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="coding-problems/src/test/java/|system-design/src/test/java/|learning-datastructures/src/|dsa-learn/src/|structural-patterns/src/|com/learn/immutablity/|dsa-learn/|design-parking-lot/src/|generics/src/test/java/|concurrency/src/main/java/|src/|interview-bit/src/|system-design/src/main/java/|coding-problems/src/main/java/|lambda-basics/src/|learning-algorithms/src/|creational-patterns/|generics/src/main/java/|11-essential/src/|concurrency/src/test/java/|creational-patterns/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="11-essential/src"/>
+	<classpathentry kind="src" path="coding-problems/src/main/java"/>
+	<classpathentry kind="src" path="coding-problems/src/test/java"/>
+	<classpathentry kind="src" path="com/learn/immutablity"/>
+	<classpathentry kind="src" path="concurrency/src/main/java"/>
+	<classpathentry kind="src" path="concurrency/src/test/java"/>
+	<classpathentry excluding="src/" kind="src" path="creational-patterns"/>
+	<classpathentry kind="src" path="creational-patterns/src"/>
+	<classpathentry kind="src" path="design-parking-lot/src"/>
+	<classpathentry excluding="src/" kind="src" path="dsa-learn"/>
+	<classpathentry kind="src" path="dsa-learn/src"/>
+	<classpathentry kind="src" path="generics/src/main/java"/>
+	<classpathentry kind="src" path="generics/src/test/java"/>
+	<classpathentry kind="src" path="interview-bit/src"/>
+	<classpathentry kind="src" path="lambda-basics/src"/>
+	<classpathentry kind="src" path="learning-algorithms/src"/>
+	<classpathentry kind="src" path="learning-datastructures/src"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="structural-patterns/src"/>
+	<classpathentry kind="src" path="system-design/src/main/java"/>
+	<classpathentry kind="src" path="system-design/src/test/java"/>
+	<classpathentry kind="output" path="11-essential/bin"/>
+</classpath>

@@ -1,0 +1,7 @@
+package java.learning.proxy;
+
+public interface Task {
+	public void setData(String data);
+
+	public int getCalData(int x);
+}
